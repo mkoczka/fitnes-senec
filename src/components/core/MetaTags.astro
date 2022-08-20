@@ -1,13 +1,14 @@
 ---
-import { getImage } from "@astrojs/image";
+// import { getImage } from "@astrojs/image";
+import { SITE } from "config.mjs";
 // const { src: defaultImage } = await getImage({
 //     src: import("~/assets/images/default.png"),
 //     width: 1200,
 //     height: 628,
 // });
 const {
-    title = "AstroWind",
-    description = "",
+    title = SITE.name,
+    description = SITE.description,
     // image = defaultImage,
     canonical,
 } = Astro.props;
