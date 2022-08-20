@@ -1,9 +1,12 @@
-import { defineConfig } from 'astro/config';
-
+import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
+import image from "@astrojs/image";
+import { SITE } from "./src/config.mjs";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()]
+  site: SITE.domain,
+  integrations: [react(), tailwind(), image()],
 });
